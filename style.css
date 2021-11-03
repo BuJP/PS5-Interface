@@ -1,0 +1,428 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(221, 32, 32);
+}
+nav{
+    position: fixed;
+    min-width: 100%;
+    z-index: 5;
+}
+.navabr{
+    
+    
+    max-width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:0 50px;
+    padding-top:25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color:white;
+}
+
+.nav-link a{
+    margin-right: 50px;
+    color: white;
+    text-decoration:none;
+}
+.nav-itm{
+    display:flex;
+    align-items:center;
+}
+.nav-itm i{
+    color:white;
+}
+.nav-itm a, span, .user-logo{
+    margin-left:50px;
+}
+.user-logo{
+    width:50px;
+    height:50px;
+    background: url("img/gojo.png") center/cover;
+    border-radius: 50%;
+    display:flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+
+    
+}
+.user-etat{
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+    background-color: green;
+    
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    
+}
+
+
+
+/* GAME ICON */
+.game-ctn{
+    margin-left: 25px;
+    
+
+}
+
+.game-ctn p{
+    margin-top: 10px;
+    position: absolute;
+    font-size:20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display:none;
+    
+}
+
+.one{ background: url("img/xiii.jpg") center/cover;}.two{ background: url("img/watchdogs.jpg") center/cover; } .three{ background: url("img/dirt.webp") center/cover; }
+.store{background:url("img/spidi.jpg")center/cover}
+.games-icn{
+    display:flex;
+    position:fixed;
+    padding-top: 110px;
+}
+.games-icn label{
+    display:inline-block;
+    
+    
+}
+.games-icn label img{
+    width:100%;
+    height:auto;
+}
+.game{
+    width:200px;
+    height:200px;
+    border-radius: 20px;
+    background-color: uns;
+}
+.game2{
+    width:150px;
+    height:150px;
+    border-radius: 20px;
+    
+    
+}
+
+
+
+
+
+
+
+
+/* APPLICATION SELECTIONNE*/
+
+/* change le bg */
+#box1:checked ~ .interface{
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("img/spiderman.jpg") center/cover;
+}
+#box2:checked ~ .interface{
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("img/bonxiii.jpg") center/cover;
+}
+#box3:checked ~ .interface{
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("img/watch-dogs-legion-banner.jpg") center/cover;
+}
+#box4:checked ~ .interface{
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("img/dirt\ bg.webp") center/cover;
+}
+
+/* rajoute la bordure sur la bonne case du slider */
+.bord4, .bord3, .bord2, .bord1 {
+    max-height:200px;
+}
+#box4:checked ~ .games-icn .game-ctn .bord4,
+#box3:checked ~ .games-icn .game-ctn .bord3,
+#box2:checked ~ .games-icn .game-ctn .bord2,
+#box1:checked ~ .games-icn .game-ctn .bord1{
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 3px rgb(228 228 228 / 72%);
+    border: 3px solid #ffffff00; 
+}
+
+/* Change le titre du jeu */
+#box4:checked ~ .games-icn .game-ctn:nth-child(5) p,
+#box3:checked ~ .games-icn .game-ctn:nth-child(4) p,
+#box2:checked ~ .games-icn .game-ctn:nth-child(3) p,
+#box1:checked ~ .games-icn .game-ctn:nth-child(2) p
+{
+    display: block;
+    transition: .3s;
+}
+/* change la taille de l icone du jeu */
+#box4:checked ~ .games-icn .three,
+#box3:checked ~ .games-icn .two,
+#box2:checked ~ .games-icn .one,
+#box1:checked ~ .games-icn .store{
+    width:200px;
+    height:200px;
+    transition: .3s;
+    
+}
+
+/* Deplace le slider de jeu */
+#box1:checked ~ .games-icn{
+    transform: translateX(0px);
+    transition: .5s;
+}
+
+#box2:checked ~ .games-icn{
+    transform: translateX(-145px);
+    transition: .5s;
+}
+
+#box3:checked ~ .games-icn{
+    transform: translateX(-290px);
+    transition: .5s;
+}
+
+#box4:checked ~ .games-icn{
+    transform: translateX(-435px);
+    transition: .5s;
+}
+
+
+
+
+
+
+
+.interface{
+    width:100%;
+    height:100%;
+    
+}
+.application{
+    max-width:100%;
+    height:100%;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+}
+.app-g{
+    max-width:50%;
+    padding-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-bottom: 100px;
+}
+.app-g span{
+    margin:0;
+    color:gold;
+}
+
+.app-g h1{
+    font-size:35px;
+    margin-bottom:20px;
+    
+}
+.app-g p{
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+.btn{
+    text-decoration:none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding:20px 100px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: rgba(240, 248, 255, 0.267);
+}
+.app-link{
+    display: flex;
+}
+.app-link div a{
+    text-decoration: none;
+    padding: 0;
+    color: white;
+    margin:0
+}
+.app-link .more{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+    font-size: 30px;
+    border-radius: 50%;
+    width:55px;
+    height:55px;
+    background-color: rgba(240, 248, 255, 0.267);
+    cursor:pointer;
+    margin-left: 10px;
+}
+
+/* SPIDERMAN */
+.spider .btn{
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+.spider .btn span{
+    color: white;
+    margin-left: 15px;;
+}
+.watchdogs > a{
+    padding: 10px 15px;
+    border: 1px solid white;
+    color: white;
+    font-size: 25px;
+    width: fit-content;
+    text-decoration: none;
+}
+.watchdogs .buy{
+    margin-top: 35px;;
+}
+.watchdogs div h2{
+    font-size: 40px;
+    letter-spacing:5px;
+    margin-bottom: 7px;
+}
+.watchdogs > p {
+    font-size:20px;
+    color: #ddd9dd;
+}
+.spider,.dirt, .xiii, .watchdogs  {
+    display: none;
+}
+
+/* -------SELECTEUR DU BAS */
+
+
+#box1:checked ~ .interface .app-g .spider,
+#box1:checked ~ .interface .app-d .app-promo .spider,
+#box1:checked ~ .interface .app-d .app-progres .prog .spider,
+#box1:checked ~ .interface .app-d .win .spider,
+
+#box4:checked ~ .interface .app-g .dirt,
+#box4:checked ~ .interface .app-d .app-promo .dirt,
+#box4:checked ~ .interface .app-d .app-progres .prog .dirt,
+#box4:checked ~ .interface .app-d .win .dirt,
+
+#box2:checked ~ .interface .app-g .xiii,
+#box2:checked ~ .interface .app-d .app-promo .xiii,
+#box2:checked ~ .interface .app-d .app-progres .prog .xiii,
+#box2:checked ~ .interface .app-d .win .xiii,
+
+#box3:checked ~ .interface .app-g .watchdogs,
+#box3:checked ~ .interface .app-d .app-promo .watchdogs,
+#box3:checked ~ .interface .app-d .app-progres .prog .watchdogs,
+#box3:checked ~ .interface .app-d .win .watchdogs{
+    display:block;
+}
+
+
+.app-progres{
+    display:flex;
+    background-color: rgb(10 9 9 / 70%);
+    margin-bottom: 85px;
+    margin-right: 200px;
+    height:130px;
+    
+    color: #868586;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 15px;
+    
+}
+
+.trophy{
+    margin: 0 10px;
+    font-size:50px;
+    display:flex;
+    align-items:center;
+}
+
+.prog{
+    margin: 0 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.prog h3{
+    font-size: 20px;
+}
+.prog p{
+    font-size: 25px;
+    color: #c4c1c1;
+}
+.win {
+    margin: 0 10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.win h3{
+    font-size: 20px;
+}
+.win p{
+    font-size: 25px;
+    color: #c4c1c1;
+}
+
+.app-promo{
+    background-color: #fff;
+    
+    margin-right: 200px;
+    padding: 0 15px;
+    height:300px;
+    margin-bottom: 20px;
+    
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    font-family: 'Poppins', sans-serif;
+}
+
+#box1:checked ~ .interface .app-d .app-promo{
+    background:url("img/spidi.jpg")center/cover;
+}
+#box2:checked ~ .interface .app-d .app-promo{
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("https://blog.css-engineering.com/wp-content/uploads/2020/11/XsegG56dFkp74h9ntGMELV-1200-80.jpg.jpeg")center/cover;
+}
+#box3:checked ~ .interface .app-d .app-promo{
+    background:url("img/wl.jpg")center/cover;
+}
+
+
+#box4:checked ~ .interface .app-d .app-promo{
+    background:url("img/d5.jpg")center/cover;
+    transition: 0.5s;
+}
+
+
+
+input{
+    display:none;
+}
+.app-promo a{
+    padding:10px 15px ;
+    border:1px solid white;
+    color:white;
+    font-size: 25px;
+    width:fit-content;
+    text-decoration:none;
+}
+
+.app-promo p{
+    background-color: #fff;
+    margin: 10px 0;
+    width:fit-content;
+    padding: 5px 15px;
+    font-size: 20px;
+
+}
